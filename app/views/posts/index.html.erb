@@ -1,1 +1,6 @@
 <h1>FrankGram</h1>
+
+<% @posts.each do |p| %>
+	<%= image_tag p.image.url(:medium) %>
+	<%= p.caption %>
+<% end %>
