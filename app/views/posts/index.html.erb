@@ -1,6 +1,20 @@
-<h1>FrankGram</h1>
+<div class="post-wrapper row">
 
-<% @posts.each do |p| %>
-	<%= image_tag p.image.url(:medium) %>
-	<%= p.caption %>
-<% end %>
+	<% @posts.each do |p| %>
+		<div class="post">
+			<div class="post-head">
+				<div class="name">
+					Frank Linehan
+				</div>
+			</div>
+			<div class="image center-block">
+				<%= link_to (image_tag p.image.url(:medium), class:'img-responsive center-block'), post_path(p)  %>
+			</div>
+			<p class="caption">
+				<%= p.caption %>
+			</p>
+		</div>
+	<% end %>
+
+</div>
+
